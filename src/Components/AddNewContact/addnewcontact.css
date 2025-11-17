@@ -1,0 +1,25 @@
+.button{
+    border-radius: 10px;
+    color: aliceblue;
+    margin-left: 25px;
+    font-size: large;
+}
+
+.input{
+    margin-left: 25px;
+    width:fit-content;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: large;
+}
+
+.contenedorform{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;    
+}
+
+.nombre{
+    color: aliceblue;
+    font-size: x-large;
+}

@@ -1,0 +1,19 @@
+.chat-list{
+    width: 50%;
+    margin: 25px;
+}
+.chat-list img{
+    width: 10%;
+}
+
+.chat-list h2{
+    color: rgb(239, 254, 254);
+}
+
+.chat-list span{
+    color: rgb(239, 254, 254);
+}
+
+hr{
+    width: 100%;
+}

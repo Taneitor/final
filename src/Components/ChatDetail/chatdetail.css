@@ -1,0 +1,14 @@
+.chatdetail{
+    margin-top: 25px;
+    color: aliceblue;
+}
+
+.chatdetail h2{
+    margin-left: 25px;
+    color: aquamarine;
+    border: 1px solid #929191;
+    border-radius: 10px;
+    padding: 5px;
+    width:fit-content;
+}
+

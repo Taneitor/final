@@ -1,0 +1,16 @@
+.mandar-msg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mandar-msg textarea{
+    width: 100%;
+    color: aliceblue;
+    font-size: larger;
+    border-radius: 10px;
+}
+.button{
+    border-radius: 10px;
+    color: aliceblue;
+}
