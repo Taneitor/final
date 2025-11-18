@@ -1,14 +1,18 @@
 .chatdetail{
-    margin-top: 25px;
-    color: aliceblue;
+    margin-top: 0;
+    color: var(--text);
 }
 
 .chatdetail h2{
-    margin-left: 25px;
-    color: aquamarine;
-    border: 1px solid #929191;
+    margin: 0 0 12px 0;
+    color: var(--accent);
+    border: 1px solid rgba(255,255,255,0.06);
     border-radius: 10px;
-    padding: 5px;
-    width:fit-content;
+    padding: 6px 10px;
+    display: inline-block;
 }
+
+.chatdetail .meta{ display:flex; gap:12px; align-items:center }
+
+.chatdetail .messages-area{ margin-top:12px }
 

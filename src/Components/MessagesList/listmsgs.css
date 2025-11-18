@@ -1,7 +1,33 @@
-.flexbox h3{
-    font-size: small;
-    color: aquamarine;
+.message{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin:8px 0;
+    max-width: 95%;
 }
-.span{
-    font-size:smaller;
+
+.message-meta{ display:flex; gap:8px; align-items:center }
+.message-meta h3{ margin:0; font-size:0.85rem; color:var(--accent) }
+.message-meta .span{ color:var(--muted); font-size:0.8rem }
+
+.message-bubble{
+    padding:8px 12px;
+    border-radius:10px;
+    max-width:80%;
 }
+
+.message--mine .message-bubble{
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+    align-self: flex-start;
+}
+
+.message--other .message-bubble{
+    background: var(--accent);
+    color: #041014;
+    align-self: flex-end;
+}
+
+.message-status{ align-self:flex-end }
+
+hr{ border:none; height:1px; background: rgba(255,255,255,0.04); margin-top:12px }

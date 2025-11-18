@@ -4,8 +4,6 @@ import AddNewContact from '../AddNewContact/AddNewContact'
 import Chatscreen from '../../Screens/ChatScreen/ChatScreen'
 import './chatlist.css'
 const ChatList = ({ contacts, addNewContact }) => {
-
-
     return (
         
         <div>

@@ -8,7 +8,7 @@ const ChatDetail = ({chatDetail, createNewMessage}) => {
     return (
         <div className='chatdetail'>
             <h2>{chatDetail.name}</h2>
-            <MessagesList messages={chatDetail.messages} className=""/>
+            <MessagesList messages={chatDetail.messages} contactId={chatDetail.user_id} />
             <CreateNewMessage createNewMessage={createNewMessage} />
         </div>
     )

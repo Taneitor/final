@@ -1,30 +1,35 @@
 import React from 'react'
 import './listmsgs.css'
 
-const MessagesList = ({messages}) => {
+const MessagesList = ({ messages, contactId }) => {
+    if (!messages || messages.length === 0) {
+        return (
+            <div>
+                <span>Aun no has chateado, envia un mensaje para hacerlo</span>
+                <hr />
+            </div>
+        )
+    }
+
     return (
         <div>
-            {
-            messages.length === 0
-            ? <span>Aun no has chateado, envia un mensaje para hacerlo</span>
-            : messages.map(
-                (message) => {
-                    return <div className='flexbox'>
-                        <h3>{message.author_name}</h3>
-                        <p>{message.content}</p>
-                        <span className='span'>{message.created_at}</span>
-                        <span>
-                            {
-                                message.status === 'VIEWED'
-                                ? <span className='span'>- Leido</span>
-                                : <span className='span'>- No leido</span>
-                            }
-                        </span>
+            {messages.map((message) => {
+                const isMine = Number(message.author_id) !== Number(contactId)
+                const cls = `message ${isMine ? 'message--mine' : 'message--other'}`
+                return (
+                    <div className={cls} key={message.id}>
+                        <div className="message-meta">
+                            <h3>{message.author_name}</h3>
+                            <span className="span">{message.created_at}</span>
+                        </div>
+                        <div className="message-bubble">{message.content}</div>
+                        <div className="message-status">
+                            {message.status === 'VIEWED' ? <span className='span'>- Leido</span> : <span className='span'>- No leido</span>}
+                        </div>
                     </div>
-                }
-            )
-            }
-            <hr/>
+                )
+            })}
+            <hr />
         </div>
     )
 }

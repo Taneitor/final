@@ -1,19 +1,20 @@
 .chat-list{
-    width: 50%;
-    margin: 25px;
-}
-.chat-list img{
-    width: 10%;
-}
-
-.chat-list h2{
-    color: rgb(239, 254, 254);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.12s ease;
 }
 
-.chat-list span{
-    color: rgb(239, 254, 254);
-}
+.chat-list:hover{ background: rgba(255,255,255,0.02); cursor:pointer }
 
-hr{
-    width: 100%;
-}
+.chat-list img{ width:50px; height:50px; border-radius:50%; object-fit:cover }
+
+.chat-list h2{ margin:0; font-size:1rem; color:var(--text) }
+
+.chat-list span{ color:var(--muted); font-size:0.85rem }
+
+.chat-list a{ display:flex; align-items:center; gap:12px; width:100% }
+
+hr{ border:none; height:1px; background: rgba(255,255,255,0.04); margin:8px 0 }

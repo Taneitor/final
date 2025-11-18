@@ -1,25 +1,7 @@
-.button{
-    border-radius: 10px;
-    color: aliceblue;
-    margin-left: 25px;
-    font-size: large;
-}
+.button{ border-radius:8px; color:#041014; margin-left:12px; font-size:1rem; padding:8px 12px; background:var(--accent); border:none }
 
-.input{
-    margin-left: 25px;
-    width:fit-content;
-    border-radius: 10px;
-    color: aliceblue;
-    font-size: large;
-}
+.input{ margin-left:12px; width:160px; border-radius:8px; color:var(--text); font-size:1rem; padding:6px 8px; background:transparent; border:1px solid rgba(255,255,255,0.04) }
 
-.contenedorform{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;    
-}
+.contenedorform{ display:flex; justify-content:center; align-items:center; margin-bottom:16px }
 
-.nombre{
-    color: aliceblue;
-    font-size: x-large;
-}
+.nombre{ color:var(--text); font-size:1.1rem }
