@@ -36,7 +36,7 @@ const contacts = [
                 id: 1,
                 content: 'Hola que tal',
                 author_id: 1,
-                author_name: "pepe",
+                author_name: "Pepito",
                 created_at: 'Hoy',
                 status: 'VIEWED'
             }
@@ -54,7 +54,7 @@ const contacts = [
                 id: 2,
                 content: 'Todo bien',
                 author_id: 2,
-                author_name: "pepe",
+                author_name: "Juancito",
                 created_at: 'Hoy',
                 status: 'VIEWED'
             }
