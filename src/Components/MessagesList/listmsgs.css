@@ -4,16 +4,27 @@
     gap:6px;
     margin:8px 0;
     max-width: 95%;
-}
+    }
 
-.message-meta{ display:flex; gap:8px; align-items:center }
-.message-meta h3{ margin:0; font-size:0.85rem; color:var(--accent) }
-.message-meta .span{ color:var(--muted); font-size:0.8rem }
+.message-meta{ display:flex; 
+                gap:8px; 
+                align-items:center 
+            }
+
+.message-meta h3{ margin:0; 
+                  font-size:0.85rem; 
+                  color:var(--accent) 
+                }
+
+.message-meta .span{ color:var(--muted); 
+                    font-size:0.8rem 
+                   }
 
 .message-bubble{
     padding:8px 12px;
     border-radius:10px;
     max-width:80%;
+    color: orange;
 }
 
 .message--mine .message-bubble{
@@ -30,4 +41,8 @@
 
 .message-status{ align-self:flex-end }
 
-hr{ border:none; height:1px; background: rgba(255,255,255,0.04); margin-top:12px }
+hr{ border: 10px;
+    height:1px; 
+    background: rgba(255,255,255,0.04);
+    margin-top:12px 
+   }

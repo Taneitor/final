@@ -1,6 +1,25 @@
-.mandar-msg{ display:flex; gap:8px; align-items:center; padding-top:10px }
+.mandar-msg{ display:flex; 
+            gap:8px; 
+            align-items:center; 
+            padding-top:10px 
+        }
 
 .mandar-msg textarea{
-    flex:1; min-height:56px; color:var(--text); font-size:1rem; border-radius:8px; padding:8px; background:transparent; border:1px solid rgba(255,255,255,0.04)
+    flex:1; 
+    min-height:80px; 
+    min-width: 400px;
+    color:var(--text); 
+    font-size:1rem; 
+    border-radius:8px; 
+    padding:8px; 
+    background:transparent; 
+    border:1px solid rgb(255, 255, 255)
 }
-.button{ border-radius:8px; padding:8px 12px; background:var(--accent); border:none; color:#041014; cursor:pointer }
+
+.button{ border-radius:8px; 
+        padding:8px 12px; 
+        background:var(--accent); 
+        border:none; 
+        color:hsl(0, 100%, 100%);
+        cursor:pointer
+    }

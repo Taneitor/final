@@ -48,7 +48,7 @@ const ChatScreen = () => {
       id: chatDetail.messages.length + 1,
       content: message,
       author_id: 50, //Aca iria MI id, ponemos un valor cualquiera
-      author_name: 'cosme fulanito', //Aca lo mismo, este es mi nombre
+      author_name: 'Victor Vincitorio', //Aca lo mismo, este es mi nombre
       created_at: 'Hoy ',
       status: 'VIEWED'
     }

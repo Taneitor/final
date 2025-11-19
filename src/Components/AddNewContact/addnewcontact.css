@@ -1,7 +1,28 @@
-.button{ border-radius:8px; color:#041014; margin-left:12px; font-size:1rem; padding:8px 12px; background:var(--accent); border:none }
+.button{ border-radius:8px; 
+        color:hsl(44, 92%, 48%);         
+        margin-left:12px; 
+        font-size:1rem; 
+        padding:8px 12px; 
+        background:var(--accent); 
+        border:none 
+    }
 
-.input{ margin-left:12px; width:160px; border-radius:8px; color:var(--text); font-size:1rem; padding:6px 8px; background:transparent; border:1px solid rgba(255,255,255,0.04) }
+.input{ margin-left:12px; width:160px; 
+        border-radius:8px; 
+        color:var(--text); 
+        font-size:1rem; 
+        padding:6px 8px; 
+        background:transparent; 
+       /* border:1px solid rgba(255,255,255,0.04) */
+       border:1px solid rgb(255, 255, 255)
+    }
 
-.contenedorform{ display:flex; justify-content:center; align-items:center; margin-bottom:16px }
+.contenedorform{ display:flex; 
+                 justify-content:center; 
+                 align-items:center; 
+                 margin-bottom:16px 
+                }
 
-.nombre{ color:var(--text); font-size:1.1rem }
+.nombre{ color:var(--text); 
+         font-size:1.1rem 
+        }

@@ -12,7 +12,10 @@
     display: inline-block;
 }
 
-.chatdetail .meta{ display:flex; gap:12px; align-items:center }
+.chatdetail .meta{ display:flex; 
+                   gap:12px; 
+                   align-items:center 
+                }
 
 .chatdetail .messages-area{ margin-top:12px }
 
