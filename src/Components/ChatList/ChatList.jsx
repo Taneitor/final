@@ -1,39 +1,35 @@
+import { Link } from 'react-router-dom';
+import AddNewContact from '../AddNewContact/AddNewContact';
+import './chatlist.css';
+import Buscador from '../buscador/Buscador';
+import { useState } from 'react';
 
-import { Link } from 'react-router'
-import AddNewContact from '../AddNewContact/AddNewContact'
-import Chatscreen from '../../Screens/ChatScreen/ChatScreen'
-import './chatlist.css'
-import Buscador from '../buscador/Buscador'
 const ChatList = ({ contacts, addNewContact }) => {
-    return (
-        
-        <div>
-            {
-                contacts.map(
-                    (contact) => {
-                        return (
-                            <>
-                            
-                                <div className="chat-list">
-                                <Link to={'/chat/' + contact.id} key={contact.id}>
-                                    <img width={'50px'} src={contact.profile_picture} />
-                                    <h2>{contact.name}</h2>
-                                    <span>Ultima conexion: {contact.last_connection}</span>
-                                </Link>
-                                <br />
-                                <hr/>
-                                </div>
-                                <hr />
-                            </>
-                        )
-                    }
-                )
-            }
-            
-            <AddNewContact addNewContact={addNewContact} />
-            <Buscador/>
-        </div>
-    )
-}
+  const [filteredContacts, setFilteredContacts] = useState(contacts);
 
-export default ChatList
+  // Actualiza filteredContacts si contacts cambian (cuando agregas)
+  useState(() => {
+    setFilteredContacts(contacts);
+  }, [contacts]);
+
+  return (
+    <div>
+      <AddNewContact addNewContact={addNewContact} />
+      <Buscador contacts={contacts} setFilteredContacts={setFilteredContacts} />
+
+      {filteredContacts.map((contact) => (
+        <div className="chat-list" key={contact.id}>
+          <Link to={'/chat/' + contact.id}>
+            <img width={'50px'} src={contact.profile_picture} alt={contact.name} />
+            <h2>{contact.name}</h2>
+            <span>Última conexión: {contact.last_connection}</span>
+          </Link>
+          <br />
+          <hr />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ChatList;
