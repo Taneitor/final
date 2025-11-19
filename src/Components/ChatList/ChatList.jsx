@@ -21,8 +21,9 @@ const ChatList = ({ contacts, addNewContact }) => {
                                 </Link>
                                 <br />
                                 <hr/>
-                                
                                 </div>
+                                <hr />
+                                
                             </>
                         )
                     }

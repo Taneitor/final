@@ -1,6 +1,10 @@
 .chatdetail{
     margin-top: 0;
     color: var(--text);
+    margin-left: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #14143a;
 }
 
 .chatdetail h2{
