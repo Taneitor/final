@@ -24,6 +24,7 @@
     padding: 16px;
     height: calc(100vh - 40px);
     overflow-y: auto;
+    background: #000;
 }
 
 /* cuando el layout sea simple (sin paneles), mantener estética */
