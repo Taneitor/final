@@ -1,0 +1,17 @@
+.divBuscar{
+    display: flex;
+}
+
+.buscador{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 10px;
+    height: 35px;
+    color: aliceblue;
+}
+
+.buscar{
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgb(43, 43, 97);
+}

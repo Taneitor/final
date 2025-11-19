@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import AddNewContact from '../AddNewContact/AddNewContact'
 import Chatscreen from '../../Screens/ChatScreen/ChatScreen'
 import './chatlist.css'
+import Buscador from '../buscador/Buscador'
 const ChatList = ({ contacts, addNewContact }) => {
     return (
         
@@ -23,7 +24,6 @@ const ChatList = ({ contacts, addNewContact }) => {
                                 <hr/>
                                 </div>
                                 <hr />
-                                
                             </>
                         )
                     }
@@ -31,6 +31,7 @@ const ChatList = ({ contacts, addNewContact }) => {
             }
             
             <AddNewContact addNewContact={addNewContact} />
+            <Buscador/>
         </div>
     )
 }
