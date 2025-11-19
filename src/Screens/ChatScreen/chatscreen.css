@@ -6,6 +6,7 @@
     margin: 0;
     padding: 20px;
     align-items: flex-start;
+    background-color: #000;
 }
 
 .container-chalist > .chat-list-panel{
