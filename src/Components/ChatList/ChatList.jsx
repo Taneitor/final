@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import AddNewContact from '../AddNewContact/AddNewContact';
 import './chatlist.css';
 import Buscador from '../buscador/Buscador';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ChatList = ({ contacts, addNewContact }) => {
   const [filteredContacts, setFilteredContacts] = useState(contacts);
 
   // Actualiza filteredContacts si contacts cambian (cuando agregas)
-  useState(() => {
+  useEffect(() => {
     setFilteredContacts(contacts);
   }, [contacts]);
 
