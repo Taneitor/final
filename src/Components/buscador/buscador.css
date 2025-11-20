@@ -1,17 +1,73 @@
-.divBuscar{
+/* 🔹 Estilos base (móvil primero) */
+.divBuscar {
     display: flex;
+    flex-direction: column; /* Móvil: en columna */
+    gap: 10px;
 }
 
-.buscador{
+.buscador {
     background-color: transparent;
     width: 100%;
     border-radius: 10px;
     height: 35px;
     color: aliceblue;
+    padding: 0 10px;
+    border: 1px solid aliceblue;
 }
 
-.buscar{
+.buscar {
     border-radius: 10px;
     color: aliceblue;
     background-color: rgb(43, 43, 97);
+    padding: 0 16px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 📱 Móvil pequeño (máx 480px) */
+@media (max-width: 480px) {
+    .divBuscar {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .buscar {
+        width: 100%;  /* Botón ancho completo */
+    }
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .divBuscar {
+        flex-direction: row;  /* Ya puede ir en fila */
+    }
+
+    .buscador {
+        width: 70%;
+    }
+
+    .buscar {
+        width: 30%;
+    }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+    .divBuscar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 50%; /* Ajusta si quieres más ancho */
+        margin: 0 auto;
+    }
+
+    .buscador {
+        width: 70%;
+    }
+
+    .buscar {
+        width: 30%;
+    }
 }

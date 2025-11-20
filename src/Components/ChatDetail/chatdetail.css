@@ -1,25 +1,70 @@
-.chatdetail{
+/* 🔹 Estilos base (móvil primero) */
+.chatdetail {
     margin-top: 0;
     color: var(--text);
-    margin-left: 25px;
-    padding: 25px;
+    margin-left: 0;            /* En móvil no dejamos margen lateral */
+    padding: 16px;
     border-radius: 10px;
     background: #14143a;
 }
 
-.chatdetail h2{
+.chatdetail h2 {
     margin: 0 0 12px 0;
     color: var(--accent);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 10px;
     padding: 6px 10px;
     display: inline-block;
+    font-size: 1.1rem;
 }
 
-.chatdetail .meta{ display:flex; 
-                   gap:12px; 
-                   align-items:center 
-                }
+.chatdetail .meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;          /* Mejor para pantallas pequeñas */
+}
 
-.chatdetail .messages-area{ margin-top:12px }
+.chatdetail .messages-area {
+    margin-top: 12px;
+}
 
+/* 📱 Pantallas pequeñas (máx 480px) */
+@media (max-width: 480px) {
+    .chatdetail {
+        width: 100%;
+        margin-left: 0;
+        padding: 14px;
+    }
+
+    .chatdetail h2 {
+        font-size: 1rem;
+        padding: 5px 8px;
+    }
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .chatdetail {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .chatdetail h2 {
+        font-size: 1.15rem;
+    }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+    .chatdetail {
+        width: 70%;
+        margin-left: 25px;   /* Tu diseño original */
+        padding: 25px;
+    }
+
+    .chatdetail h2 {
+        font-size: 1.2rem;
+    }
+}

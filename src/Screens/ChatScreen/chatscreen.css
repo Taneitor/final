@@ -1,32 +1,75 @@
-.container-chalist{
+/* 🔹 Estilos base (Móvil primero) */
+.container-chalist {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Columna en móvil */
+    gap: 12px;
     width: 100%;
-    height: 100vh;
+    height: auto; /* Ajusta altura en móvil */
     margin: 0;
-    padding: 20px;
-    align-items: flex-start;
-    
+    padding: 12px;
+    align-items: stretch;
 }
 
-.container-chalist > .chat-list-panel{
-    width: 320px;
+.container-chalist > .chat-list-panel {
+    width: 100%;           /* Panel ocupa todo el ancho en móvil */
     background: var(--card);
     border-radius: 10px;
     padding: 12px;
-    height: calc(100vh - 40px);
+    height: auto;          /* Ajusta altura según contenido */
+    max-height: 50vh;      /* Máximo medio viewport en móvil */
     overflow-y: auto;
 }
 
-.container-chalist > .chat-detail-panel{
-    flex: 1;
-    background: var(--card);
+.container-chalist > .chat-detail-panel {
+    width: 100%;
+    background: #000;      /* Mantener tu color original */
     border-radius: 10px;
     padding: 16px;
-    height: calc(100vh - 40px);
+    height: auto;
+    max-height: 50vh;
     overflow-y: auto;
-    background: #000;
 }
 
-/* cuando el layout sea simple (sin paneles), mantener estética */
-.container-chalist > h2{ color:var(--muted); margin: 24px }
+.container-chalist > h2 {
+    color: var(--muted);
+    margin: 16px 0;
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-chalist {
+        flex-direction: row;    /* Paneles en fila */
+        gap: 16px;
+        height: 100vh;
+    }
+
+    .container-chalist > .chat-list-panel {
+        width: 200px;           /* Panel más estrecho */
+        max-height: calc(100vh - 32px);
+    }
+
+    .container-chalist > .chat-detail-panel {
+        flex: 1;
+        max-height: calc(100vh - 32px);
+    }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+    .container-chalist {
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    .container-chalist > .chat-list-panel {
+        width: 320px;           /* Mantiene tu ancho original */
+        height: calc(100vh - 40px);
+    }
+
+    .container-chalist > .chat-detail-panel {
+        flex: 1;
+        height: calc(100vh - 40px);
+    }
+}
