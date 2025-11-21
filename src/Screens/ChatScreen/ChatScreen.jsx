@@ -32,7 +32,7 @@ const ChatScreen = () => {
       id: contacts.length + 1,
       user_id: contacts.length + 1,
       name: name,
-      profile_picture: 'https://i.etsystatic.com/52946191/r/il/20ab0d/6269485703/il_794xN.6269485703_jno8.jpg',
+      profile_picture: 'https://i.etsystatic.com/47537493/r/il/858f79/7409293765/il_794xN.7409293765_n7uf.jpg',
       last_connection: 'ahora',
       is_connected: true,
       messages:[]

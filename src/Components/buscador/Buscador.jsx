@@ -18,7 +18,7 @@ const Buscador = ({ contacts, setFilteredContacts }) => {
         type="text"
         id="buscador"
         className="buscador"
-        placeholder="Busque un contacto"
+        placeholder="Contacto"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

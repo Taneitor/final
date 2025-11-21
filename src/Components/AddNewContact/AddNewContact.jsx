@@ -21,8 +21,8 @@ const AddNewContact = ({ addNewContact, newContacts }) => {
     <form onSubmit={handleSubmitNewContactForm}>  
         <div className='contenedorform'>
             <label htmlFor='name' className='nombre'>Nombre: </label>
-            <input name='name' id='name' placeholder='Nuevo chat' className='input'/>
-            <button type='submit' className='button'>Crear contacto</button>
+            <input name='name' id='name' placeholder='Usuario' className='input'/>
+            <button type='submit' className='button'>Crear chat</button>
         </div>
     </form>
     <hr />
