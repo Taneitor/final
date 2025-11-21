@@ -1,0 +1,101 @@
+/* 🔹 Estilos base (móvil primero) */
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0;
+    max-width: 100%; /* Ocupa todo el ancho en móvil */
+}
+
+.message-meta {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap; /* Mejor para pantallas pequeñas */
+}
+
+.message-meta h3 {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.message-meta .span {
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.message-bubble {
+    padding: 6px 10px;
+    border-radius: 10px;
+    max-width: 90%; /* Ajuste para móvil */
+    color: orange;
+    word-wrap: break-word;
+}
+
+.message--mine .message-bubble {
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+    align-self: flex-start;
+}
+
+.message--other .message-bubble {
+    background: var(--accent);
+    color: #041014;
+    align-self: flex-end;
+}
+
+.message-status {
+    align-self: flex-end;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.04);
+    margin-top: 12px;
+}
+
+/* 📱 Tablet pequeña (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .message {
+        max-width: 95%;
+        gap: 8px;
+        margin: 8px 0;
+    }
+
+    .message-meta h3 {
+        font-size: 0.85rem;
+    }
+
+    .message-meta .span {
+        font-size: 0.8rem;
+    }
+
+    .message-bubble {
+        max-width: 85%;
+        padding: 8px 12px;
+    }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+    .message {
+        max-width: 80%;
+        gap: 8px;
+        margin: 8px 0;
+    }
+
+    .message-meta h3 {
+        font-size: 0.9rem;
+    }
+
+    .message-meta .span {
+        font-size: 0.85rem;
+    }
+
+    .message-bubble {
+        max-width: 70%;
+        padding: 8px 14px;
+    }
+}
