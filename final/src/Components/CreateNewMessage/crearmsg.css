@@ -1,0 +1,66 @@
+/* 🔹 Estilos base (Móvil primero) */
+.mandar-msg {
+    display: flex;
+    flex-direction: column; /* Columna en móvil */
+    gap: 8px;
+    align-items: stretch;
+    padding-top: 10px;
+}
+
+.mandar-msg textarea {
+    flex: 1;
+    min-height: 60px;       /* Más compacto en móvil */
+    width: 100%;            /* Ancho completo */
+    color: var(--text);
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    resize: vertical;       /* Permite cambiar altura */
+}
+
+.button {
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: var(--accent);
+    border: none;
+    color: hsl(0, 100%, 100%);
+    cursor: pointer;
+    width: 100%;            /* Botón ancho completo en móvil */
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mandar-msg {
+        flex-direction: row;  /* Fila en tablet */
+        align-items: flex-end;
+    }
+
+    .mandar-msg textarea {
+        min-width: 250px;
+        max-width: 70%;
+    }
+
+    .button {
+        width: auto;          /* Tamaño automático del botón */
+    }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+    .mandar-msg {
+        flex-direction: row;
+        gap: 12px;
+        padding-top: 10px;
+    }
+
+    .mandar-msg textarea {
+        min-width: 400px;     /* Mantiene tu ancho original */
+    }
+
+    .button {
+        width: auto;
+        padding: 8px 16px;
+    }
+}

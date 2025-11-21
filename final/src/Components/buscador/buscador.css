@@ -1,0 +1,101 @@
+/* 🔹 Estilos base (móvil primero) */
+.divBuscar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.buscador {
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  color: aliceblue;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: 1px solid aliceblue;
+  box-sizing: border-box;
+}
+
+/* input flexible cuando el layout es fila */
+.divBuscar.row {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* usar flex para que input ocupe el espacio disponible */
+.divBuscar.row .buscador {
+  flex: 1 1 0%;
+  width: auto;
+  min-width: 180px;
+}
+
+/* botón */
+.buscar {
+  border-radius: 8px;
+  color: aliceblue;
+  background-color: rgb(43, 43, 97);
+  padding: 8px 14px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* 📱 Móvil pequeño (máx 480px) */
+@media (max-width: 480px) {
+  .divBuscar {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .buscar {
+    width: 100%;
+  }
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .divBuscar {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .divBuscar .buscador {
+    flex: 1 1 70%;
+    min-width: 220px;
+  }
+
+  .divBuscar .buscar {
+    flex: 0 0 30%;
+    min-width: 90px;
+  }
+}
+
+/* 🖥️ Desktop (más de 768px) */
+@media (min-width: 768px) {
+  .divBuscar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 80%; /* aumentado para que el form sea más ancho en desktop */
+    max-width: 1100px; /* evita que crezca indefinidamente en pantallas muy grandes */
+    margin: 0 auto;
+  }
+
+  .divBuscar .buscador {
+    flex: 1 1 75%;
+    min-width: 360px;
+  }
+
+  .divBuscar .buscar {
+    flex: 0 0 20%;
+    min-width: 100px;
+  }
+}
+
